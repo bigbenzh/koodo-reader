@@ -19,13 +19,9 @@ jobs:
           node-version: '14'
       - run: npm install yarn -g
       - run: yarn 
-      - run: yarn release
-      - name: Archive Release
-        uses: thedoctor0/zip-release@master
-        with:
-          type: 'zip'
-          filename: 'release.zip'
-          path: 'assets/'
+      - run: yarn build
+      - run: yarn dist
+      
       - name: release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -34,4 +30,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            release.zip
+            dist/*.zip
