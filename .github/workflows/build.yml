@@ -20,7 +20,8 @@ jobs:
       - run: npm install yarn -g
       - run: yarn 
       - run: yarn build
-      - run: yarn dist --publish=never
+      - name: generate release
+        run: npx electron-builder --publish=never
       
       - name: release
         uses: "marvinpinto/action-automatic-releases@latest"
