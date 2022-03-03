@@ -1,4 +1,4 @@
-import GA from "electron-google-analytics";
+import GA from "./fake-ga.js";
 import * as pkg from "../../../package.json";
 
 const isDevelopment = process.env.NODE_ENV === "development";
