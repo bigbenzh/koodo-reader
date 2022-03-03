@@ -272,4 +272,4 @@ class GA {
   }
 }
 
-export default Analytics;
+export default GA;
