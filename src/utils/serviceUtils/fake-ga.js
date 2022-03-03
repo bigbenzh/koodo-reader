@@ -10,7 +10,9 @@ class GA {
     userAgent = '',
     debug = false,
     version = 1
-  } = {}) {}
+  } = {}) {
+    this.foo={};
+  }
 
   /**
    * Adds custom parameters to requests
