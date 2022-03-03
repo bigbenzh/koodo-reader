@@ -1,6 +1,4 @@
 name: build
-env: 
-  CI: false
 
 on:
   workflow_dispatch:
